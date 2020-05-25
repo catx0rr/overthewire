@@ -84,7 +84,7 @@
 - bandit13 
     - Commands:
         - ```ssh bandit14@localhost -i sshkey.private```
-        - ```find /etc/bandit_pass/ -type f -user bandit14 -perm 400 | xargs cat```
+        - ```find /etc/bandit_pass/ -type f -user bandit14 -perm -400 | xargs cat```
 
 - bandit14
     - Commands:
@@ -101,7 +101,7 @@
         - ```echo 'cluFn7wTiGryunymYOu4RcffSxQluehd' | openssl s_client -connect 127.0.0.1:31790 -quiet -ign_eof > /tmp/id_rsa```
         - ```chmod 600 /tmp/id_rsa```
         - ```ssh -i /tmp/id_rsa bandit17@127.0.0.1```
-        - ```find /etc/bandit_pass/ -user bandit17 -perm 400 | xargs cat```
+        - ```find /etc/bandit_pass/ -user bandit17 -perm -400 | xargs cat```
 
 - bandit17
     - Commands:
@@ -116,3 +116,12 @@
 - bandit19
     - Commands:
         - ```./bandit20-do cat /etc/bandit_pass/bandit20```
+
+- bandit20
+    - Commands:
+        - ```find /etc/bandit_pass/ -type f -perm -400 -user bandit20 | xargs cat | nc -lvp 1337```
+        - ```./suconnect 1337```
+
+- bandit21
+    - Commands:
+        -
