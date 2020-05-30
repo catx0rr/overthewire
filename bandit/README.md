@@ -126,8 +126,8 @@
     - ```ssh -i bandit26.sshkey bandit26@127.0.0.1```
     - ```press v:```
     - ```on vi command, enter following commands:```
-         ```:set shell=/bin/bash```
-         ```:shell```
+         - ```:set shell=/bin/bash```
+         - ```:shell```
     - ```find /etc/bandit_pass/ -type f -perm -400 -user bandit26 | xargs cat```
 
 - bandit26
