@@ -122,12 +122,12 @@
 - bandit25
     - ```getent passwd | grep bandit26```
     - ```cat /usr/bin/showtext```
-    - ```"minimize the terminal to show "more" on sshconnect"```
+    - ```minimize the terminal to show "more" on sshconnect:```
     - ```ssh -i bandit26.sshkey bandit26@127.0.0.1```
-    - ```press v```
-    - ```on vi command, enter following commands:
-         :set shell=/bin/bash
-         :shell```
+    - ```press v:```
+    - ```on vi command, enter following commands:```
+         ```:set shell=/bin/bash```
+         ```:shell```
     - ```find /etc/bandit_pass/ -type f -perm -400 -user bandit26 | xargs cat```
 
 - bandit26
@@ -175,7 +175,6 @@
     - ```mkdir /tmp/B32/ && ln -sf /bin/bash /tmp/B32/BASH```
     - ```login on ssh on bandit32:```
     - ```/???/B32/BASH```
-    - ```/*/B32/BASH```
     - ```cat /etc/bandit_pass/bandit32```
 - other solution:
     - ```/*/B32/BASH```
