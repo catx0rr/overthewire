@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup, Comment
 password_file = Path('../passwords.txt')
 
 
-level = 1
+level = 0
 username = '%s%s' % ('natas', level)
 passwords = open(password_file, 'r').readlines()
 
@@ -32,7 +32,6 @@ if __name__ == '__main__':
             pass
 
         else:
-
             # Create a BS parser
             soup = BeautifulSoup(http.text, 'html.parser')
 
@@ -41,6 +40,8 @@ if __name__ == '__main__':
 
             # Get the exact match using a pattern and print
             flag = re.search(r'[a-zA-Z0-9]{32,}', result[1]).group(0)
+
+            print(flag)
 
             # Save the flag
             with open('flag.txt', 'w') as out:
