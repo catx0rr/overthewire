@@ -39,9 +39,6 @@ if __name__ == '__main__':
             # Create a BS parser
             soup = BeautifulSoup(http.text, 'html.parser')
 
-            # Get all comments in the html using anonymous function
-            # result = soup.find_all(string=lambda text: isinstance(text))
-
             # Get the exact match using a pattern and print
             flag = re.search(r'[a-zA-Z0-9]{32,}', soup.text).group(0)
 

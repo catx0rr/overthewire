@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup, Comment
 password_file = Path('../passwords.txt')
 
 
-level = 4
+level = 6
 username = '%s%s' % ('natas', level)
 passwords = open(password_file, 'r').readlines()
 
@@ -24,13 +24,14 @@ if __name__ == '__main__':
 
         password = password.strip()
 
-        # Add additional referer header
-        referer = {
-            'referer': 'http://natas5.natas.labs.overthewire.org/'
+        # Send the data gathered to the includes/secret.inc
+        data = {
+            'secret': 'FOEIUWGHFEEUHOFUOIU',
+            'submit': 'submit'
         }
 
-        # Pass the username, password to request and the additional header
-        http = requests.post(url, auth=(username, password), headers=referer)
+        # Pass the username, password and data as POST request to server
+        http = requests.post(url, auth=(username, password), data=data)
 
         if http.status_code != 200:
             pass

