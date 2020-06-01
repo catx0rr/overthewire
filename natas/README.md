@@ -19,7 +19,7 @@
 - automated:
     - ```curl -sv http://natas1.natas.labs.overthewire.org --user natas1:gtVrDuiDfck831PqWsLEZy5gyDz1clto | grep -o '<!--[A-Za-z].*' | awk '{print $6}'```
 - python:
-    - ```[solve.py]```
+    - ```[solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas0/solve.py)```
 
 - natas2
     - ```Login to web:```

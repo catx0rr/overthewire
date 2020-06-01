@@ -6,4 +6,3 @@
 
 - Natas
     - Server-side Web Security
-    - Next in line
