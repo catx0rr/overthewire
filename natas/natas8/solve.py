@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 
+import base64
 import requests
 import re
 
@@ -8,10 +9,10 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 
-password_file = Path('passwords.txt')
+password_file = Path('../passwords.txt')
 
 
-level = 10
+level = 8
 username = '%s%s' % ('natas', level)
 passwords = open(password_file, 'r').readlines()
 
@@ -24,9 +25,15 @@ if __name__ == '__main__':
 
         password = password.strip()
 
-        # On passthru function,  search for the password as grep -i indicates.
+        # Decode the hex from the encoded string on source
+        decoded_hex = bytes.fromhex('3d3d516343746d4d6d6c315669563362')
+
+        # From Hex, to b64 to ASCII
+        decoded_str = base64.b64decode(decoded_hex[::-1]).decode('utf-8')
+
+        # Send the decoded data to the request
         data = {
-            'needle': '"^[A-Za-z0-9].*$" /etc/natas_webpass/natas11 \\',
+            'secret': decoded_str,
             'submit': 'submit'
         }
 

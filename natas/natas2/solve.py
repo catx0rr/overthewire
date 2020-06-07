@@ -5,7 +5,7 @@ import requests
 import re
 
 from pathlib import Path
-from bs4 import BeautifulSoup, Comment
+from bs4 import BeautifulSoup
 
 
 password_file = Path('../passwords.txt')

