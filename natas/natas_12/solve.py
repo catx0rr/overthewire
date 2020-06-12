@@ -74,7 +74,7 @@ if __name__ == '__main__':
             # Print the result of uploaded file
             # print('%s' % source)
 
-            uploaded_file = re.search(r'[a-zA-Z0-9]{10}.php', source).group(0)
+            uploaded_file = re.search(r'[a-zA-Z0-9]{10}.[a-zA-Z]{3}', source).group(0)
 
             # Parse the result of the .php file uploaded
             read_result = requests.get('%supload/%s' % (url, uploaded_file), auth=(username, password))

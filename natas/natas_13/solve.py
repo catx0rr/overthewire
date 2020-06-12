@@ -8,6 +8,8 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 
+# OLD SCRIPT
+
 password_file = Path('../passwords.txt')
 
 
