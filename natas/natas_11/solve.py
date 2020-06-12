@@ -26,7 +26,7 @@ def xor_crypt(text):
     encrypted_text = ''
 
     # Key from decrypted xor cipher and the known plaintext
-    key = 'qw8Jqw8Jqw8Jqw8Jqw8Jqw8Jqw8Jqw8Jqw8Jqw8Jq'
+    key = 'qw8J'
 
     # Iterate on the string per char on plaintext, and xor with key
     for i in range(len(text)):
@@ -61,6 +61,8 @@ if __name__ == '__main__':
             'data': cookie
         }
 
+        # print(cookies)
+
         # Pass the username, password and cookie to request
         http = requests.post(url, auth=(username, password), cookies=cookies)
 
@@ -75,7 +77,7 @@ if __name__ == '__main__':
             result = soup.select('#content')[0].text
 
             # Get the exact match using a pattern and print
-            flag = re.search(r'[a-zA-Z0-9]{32,}', result).group(0)
+            flag = re.search(r'[a-zA-Z0-9]{32}', result).group(0)
 
             print(flag)
 
@@ -83,6 +85,6 @@ if __name__ == '__main__':
             with open('flag.txt', 'w') as out:
                 out.write(flag)
 
-            out.close()
+                out.close()
 
             break

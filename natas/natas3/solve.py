@@ -40,7 +40,7 @@ if __name__ == '__main__':
             soup = BeautifulSoup(http.text, 'html.parser')
 
             # Get the exact match using a pattern and print
-            flag = re.search(r'[a-zA-Z0-9]{32,}', soup.text).group(0)
+            flag = re.search(r'[a-zA-Z0-9]{32}', soup.text).group(0)
 
             print(flag)
 

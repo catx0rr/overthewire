@@ -39,7 +39,7 @@ if __name__ == '__main__':
             result = soup.find_all(string=lambda text: isinstance(text, Comment))
 
             # Get the exact match using a pattern and print
-            flag = re.search(r'[a-zA-Z0-9]{32,}', result[1]).group(0)
+            flag = re.search(r'[a-zA-Z0-9]{32}', result[1]).group(0)
 
             print(flag)
 

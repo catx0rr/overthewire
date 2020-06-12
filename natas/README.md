@@ -169,3 +169,36 @@
 
 - python:
     - [natas11/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas_11/solve.py)
+
+- natas_12
+    - ```Login to web:```
+    - ```Upload a file to get password```
+    - ```Created a file contains remote execution command system('cat /etc/natas_webpass/natas13')```
+    - ```Changed the hidden input .jpg to .php to successfully upload the php file```
+    - ``` Upload the php file, and then go to the file that has been uploaded on [domain]/upload/[uploadedfile].php```
+    - ```or change using Burpsuite```
+
+- python:
+    - [natas11/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas_12/solve.py)
+
+- natas_13
+    - ```Create a .jpg file with terminal:```
+    - ```echo '<?php system("/etc/natas_webpass/natas14"); ?>' > test.jpg```
+    - ```Edit magic numbers so you may upload the file as fake jpg```
+    - ```hexeditor -b test.jpg```
+    - ```Add nullbyte (Ctrl+A)```
+    - ```Modify the null magic number into jpg file since exif_imagetype() function reads the first byte to check the signature```
+    - ```FF D8 FF DB```
+    - ```PHP function: https://www.php.net/manual/en/function.exif-imagetype.php```
+    - ```Magic Numbers: https://en.wikipedia.org/wiki/List_of_file_signatures```
+
+- send the data:
+    - ```Login to web:```
+    - ```Upload a file to get password```
+    - ```Created a file contains remote execution command system('cat /etc/natas_webpass/natas13')```
+    - ```Changed the hidden input .jpg to .php to successfully upload the php file```
+    - ``` Upload the php file, and then go to the file that has been uploaded on [domain]/upload/[uploadedfile].php```
+    - ```or change using Burpsuite```
+
+- python:
+    - [natas11/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas_13/solve.py)
