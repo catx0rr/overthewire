@@ -10,7 +10,6 @@ from bs4 import BeautifulSoup
 
 password_file = Path('../passwords.txt')
 
-
 level = 6
 username = '%s%s' % ('natas', level)
 passwords = open(password_file, 'r').readlines()
