@@ -201,4 +201,15 @@
     - ```or change using Burpsuite```
 
 - python:
-    - [natas11/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas_13/solve.py)
+    - [natas_13/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas_13/exploit.py)
+
+
+- natas_14 
+    - ```Login to web:```
+    - ```check the source code```
+    - ```found a sqli using " quote```
+    - ```" or 1 -- -```
+    - ```submit```
+
+- python:
+    - [natas_14](https://github.com/catx0rr/overthewire/blobl/master/natas/natas_14/exploit.py)
