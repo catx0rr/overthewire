@@ -195,7 +195,7 @@ $encodedSecret = "3d3d516343746d4d6d6c315669563362"; function encodeSecret($secr
 On linux shell:
 ```
 echo -n "3d3d516343746d4d6d6c315669563362" | xxd -r -p | rev | base64 -d
-send the decode string
+send the decoded string
 ```
 curl
 ```
@@ -297,7 +297,7 @@ ClVLIh4ASCsCBE8lAxMacFMZV2hdVVotEhhUJQNVAmhSEV4sFxFeaAw%3D
 ```
 You will get the key for the xor encryption.
 
-I run the [php code](https://github.com/catx0rr/overthewire/blob/master/natas_11/findkey.php) and translate it to [python](https://github.com/catx0rr/overthewire/blob/master/natas_11/findkey.py) here.
+I run the [php code](https://github.com/catx0rr/overthewire/blob/master/natas/natas_11/findkey.php) and translate it to [python](https://github.com/catx0rr/overthewire/blob/master/natas/natas_11/findkey.py) here.
 ```
 qw8Jqw8Jqw8Jqw8Jqw8Jqw8Jqw8Jqw8Jqw8Jqw8Jq
 ```
