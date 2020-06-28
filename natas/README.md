@@ -20,7 +20,7 @@ curl
 curl -sv http://natas0.natas.labs.overthewire.org/ --user natas0:natas0 | grep -oe '<!--[A-Za-z].*' | cut -d ' ' -f6
 ```
 python script
-- [natas0/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas0/solve.py)
+- [natas0/exploit.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas0/exploit.py)
 
 
 ### natas1
@@ -35,7 +35,7 @@ curl
 curl -sv http://natas1.natas.labs.overthewire.org --user natas1:gtVrDuiDfck831PqWsLEZy5gyDz1clto | grep -o '<!--[A-Za-z].*' | awk '{print $6}'
 ```
 python script
-- [natas1/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas1/solve.py)
+- [natas1/exploit.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas1/exploit.py)
 
 
 ### natas2
@@ -52,7 +52,7 @@ curl -sv http://natas2.natas.labs.overthewire.org/files/users.txt --user natas2:
 ```
 
 python script
-- [natas2/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas2/solve.py)
+- [natas2/exploit.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas2/exploit.py)
 
 
 ### natas3
@@ -73,7 +73,7 @@ curl -sv http://natas3.natas.labs.overthewire.org/s3cr3t/users.txt --user natas3
 ```
 
 python script
-    - [natas3/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas3/solve.py)
+    - [natas3/exploit.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas3/exploit.py)
 
 
 ### natas4
@@ -98,7 +98,7 @@ curl -sv http://natas4.natas.labs.overthewire.org/index.php -H "Referer: http://
 ```
 
 python script
-- [natas4/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas4/solve.py)
+- [natas4/exploit.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas4/exploit.py)
 
 
 ### natas5
@@ -127,7 +127,7 @@ curl -sv http://natas5.natas.labs.overthewire.org/ --user natas5:iX6IOfmpN7AYOQG
 ```
 
 python script
-- [natas5/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas5/solve.py)
+- [natas5/exploit.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas5/exploit.py)
 
 
 ### natas6
@@ -149,7 +149,7 @@ curl -X POST -sv http://natas6.natas.labs.overthewire.org/ --user natas6:aGoY4q2
 ```
 
 python script
-- [natas6/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas6/solve.py)
+- [natas6/exploit.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas6/exploit.py)
 
 
 ### natas7
@@ -180,7 +180,7 @@ curl -X GET -sv http://natas7.natas.labs.overthewire.org/index.php?page=/etc/nat
 ```
 
 python script
-- [natas7/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas7/solve.py)
+- [natas7/exploit.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas7/exploit.py)
 
 
 ### natas8
@@ -205,7 +205,7 @@ curl -X POST -sv -N http://natas8.natas.labs.overthewire.org/ --user natas8:DBfU
 ```
 
 python script
-- [natas8/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas8/solve.py)
+- [natas8/exploit.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas8/exploit.py)
 
 
 ### natas9
@@ -237,7 +237,7 @@ curl -X POST -sv http://natas9.natas.labs.overthewire.org/ --user natas9:W0mMhUc
 ```
 
 python script
-- [natas9/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas9/solve.py)
+- [natas9/exploit.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas9/exploit.py)
 
 
 ### natas10
@@ -265,7 +265,7 @@ curl -X POST -sv http://natas10.natas.labs.overthewire.org/ --user natas10:nOpp1
 ```
 
 python script
-- [natas10/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas_10/solve.py)
+- [natas10/exploit.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas_10/exploit.py)
 
 
 ### natas11
@@ -319,7 +319,7 @@ curl -X POST -sv http://natas11.natas.labs.overthewire.org/ --user natas11:U82q5
 ```
 
 python script
-- [natas11/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas_11/solve.py)
+- [natas11/exploit.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas_11/exploit.py)
 
 
 ### natas12
@@ -364,7 +364,7 @@ go to: http://natas12.natas.labs/overthewire.org/upload/<uploadedfile.php>
 ```
 
 python script
-- [natas11/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas_12/solve.py)
+- [natas11/exploit.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas_12/exploit.py)
 
 
 ### natas13
@@ -448,7 +448,7 @@ go to: http://natas12.natas.labs/overthewire.org/upload/<uploadedfile.php>
 ```
 
 python script
-- [natas_13/solve.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas_13/exploit.py)
+- [natas_13/exploit.py](https://github.com/catx0rr/overthewire/blob/master/natas/natas_13/exploit.py)
 
 
 ### natas14
@@ -478,4 +478,4 @@ Login
 ```
 
 python script
-- [natas_14](https://github.com/catx0rr/overthewire/blobl/master/natas/natas_14/exploit.py)
+- [natas_14/exploit.py](https://github.com/catx0rr/overthewire/blobl/master/natas/natas_14/exploit.py)
